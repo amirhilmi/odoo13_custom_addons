@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- action of charity details menu -->
+
+    <record id="action_charity_income" model="ir.actions.act_window">
+        <field name="name">Charity Amount</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">charity.detail</field>
+
+        <!-- <field name="view_type">form</field> -->    <!-- in v13 not needed -->
+            
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create Charity Income Collection.
+            </p>
+        </field>
+    </record>
+
+
+    <menuitem id="charityIncome_root" name="Charity Income" sequence="2"/>
+    <menuitem id="charityIncome_details" name="Charity Detail" parent="charityIncome_root" action="action_charity_income"/>
+
+
+
+</odoo>
+
+
+
