@@ -2,10 +2,10 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 {
-    'name': 'Charity Income',
+    'name': 'School Management 2',
     'version': '13.0.0.0.1',
-    'category': 'Income',
-    'summary': 'Mymasjid module to record charity fund receive',
+    'category': 'Extra Tools',
+    'summary': 'School record',
     'sequence': '2',
     'author': 'Aamir',
     'license': 'LGPL-3',
@@ -13,17 +13,18 @@
     'maintainer': 'TCM',
     'support': 'amir.hi575@gmail.com',
     'website': '',
-    'depends': [],
+    'depends': ['base'],
     'live_test_url': '',
     'demo': [],
     'data': [
-        'charity.xml'
+        # 'security/ir.model.access.csv',
+        'views/student.xml'
 
 
     ],
     'installable': True,
     'application': True,
     'auto_install': False,
-    'images': ['images/accounts.jpeg'],
+    # 'images': ['images/accounts.jpeg'],
     'qweb': [],
 }
