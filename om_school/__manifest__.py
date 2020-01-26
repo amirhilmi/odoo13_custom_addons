@@ -13,7 +13,7 @@
     'maintainer': 'TCM',
     'support': 'amir.hi575@gmail.com',
     'website': '',
-    'depends': ['base'],
+    'depends': ['base','mail'],
     'live_test_url': '',
     'demo': [],
     'data': [
