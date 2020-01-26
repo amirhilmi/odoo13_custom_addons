@@ -6,7 +6,7 @@
     <record id="action_student2" model="ir.actions.act_window">
         <field name="name">Students</field>
         <field name="type">ir.actions.act_window</field>
-        <field name="res_model">school.student2</field>
+        <field name="res_model">school.student</field>
 
         <!-- <field name="view_type">form</field> -->    <!-- in v13 not needed -->
             

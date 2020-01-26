@@ -2,7 +2,7 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 {
-    'name': 'School Management 2',
+    'name': 'School Management',
     'version': '13.0.0.0.1',
     'category': 'Extra Tools',
     'summary': 'School record',
