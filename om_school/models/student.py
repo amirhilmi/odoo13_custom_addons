@@ -4,7 +4,7 @@ from odoo import models, fields
 
 
 class SchoolStudent(models.Model):
-    _name = 'school.student2'
+    _name = 'school.student'
     # _inherit = ['mail.thread','mail.activity.mixin']
     _description = "Student Table"
 
