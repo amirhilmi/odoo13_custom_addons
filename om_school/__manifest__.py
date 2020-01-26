@@ -17,7 +17,7 @@
     'live_test_url': '',
     'demo': [],
     'data': [
-        # 'security/ir.model.access.csv',
+        'security/ir.model.access.csv',
         'views/student.xml'
 
 
