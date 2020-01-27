@@ -8,14 +8,19 @@ class SchoolStudent(models.Model):
     _inherit = ['mail.thread','mail.activity.mixin']
     _description = "Student Table"
 
-    name = fields.Char(string="Name", required=True)
+    charity_amount = fields.Integer(string="Amount of Charity Received", required=True)
+#     name = fields.Char(string="Name")
     age = fields.Integer(string="Age")
-    guardian = fields.Char(string="Guardian")
-    note = fields.Text(string="Notes")
-    gender = fields.Selection([
-            ('male', 'Male'),
-            ('female', 'Female'),
+    personInCharge = fields.Char(string="Person In Charge")
+    charity_channel = fields.Selection(
+        [
+            ('moneyBox_friday', 'Moneybox - Friday'),
+            ('moneyBox_orphan', 'Moneybox - Orphan'),
+            ('moneyBox_1', 'Moneybox - 1'),
             ('other', 'Other'),
+        ], 
+        string='Charity Channel', default='moneyBox_1')
 
-    ], string='Gender', default='male')
-    image = fields.Binary(string="Image")
+    date_of_collection = fields.Char(string="Date Of Collection")
+    note = fields.Text(string="Notes")  
+    image = fields.Binary(string="Receipt")

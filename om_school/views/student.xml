@@ -7,9 +7,10 @@
         <field name="model">school.student</field>
         <field name="arch" type="xml">
             <tree string="Students">
-                <field name="name"/>
-                <field name="age"/>
-                <field name="guardian"/>
+                <field name="charity_amount"/>
+                <field name="charity_channel"/>
+                <field name="personInCharge"/>
+                <field name="note"/>
             </tree>
         </field>
     </record>
@@ -20,23 +21,39 @@
         <field name="arch" type="xml">
             <form string="Students">
                 
+
+                <header> ... content of the status bar  ... </header>
+
                 <sheet>
-                    <field name="image" widget="image" class="joe_avatar"/>
                     <div class="oe_title">
-                        <h1>
-                            <field name="name"/>
-                        </h1>
+
+                            <!-- <label for="charity_amount" class="oe_edit_only"/>
+                            <h1><field name="charity_amount" placeholder="e.g. Update order quantity"/></h1>
+                             -->
+                            <label for="charity_amount" />
+                            <h1><field name="charity_amount"/></h1>
                     </div>
+
                     <group>
                         <group>
-                            <field name = "gender"/>
-                        </group>
-                        <group>
-                            <field name = "age"/>
-                            <field name = "guardian"/>
+
+                            <field name="charity_channel"/>
+                            <field name="personInCharge"/>
+                            <field name ="date_of_collection"/>
+                            <field name="note"/>
+
+                            
+                            <field name="image" widget="image" class="joe_avatar"/>
+
+
                         </group>                        
                     </group>
+                    <!-- <label for="charity_amount" />
+                    <field name="image" widget="image" class="joe_avatar"/> -->
+
                 </sheet>
+
+
 
                 <div class="oe_chatter">
                     <field name="message_follower_ids" widget="mail_followers"/>
@@ -63,10 +80,9 @@
         <!-- <field name="view_type">form</field> -->    <!-- in v13 not needed -->
             
         <field name="view_mode">tree,form</field>
-        <field name="view_mode">form</field>
 
         <field name="context">{}</field>
-        <field name="domain">{}</field>
+        <field name="domain">[]</field>
 
         <field name="help" type="html">
             <p class="o_view_nocontent_smiling_face">
