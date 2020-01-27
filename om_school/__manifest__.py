@@ -2,10 +2,10 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 {
-    'name': 'School Management',
+    'name': 'Charity Management',
     'version': '13.0.0.0.1',
     'category': 'Extra Tools',
-    'summary': 'School record',
+    'summary': 'Charity record',
     'sequence': '2',
     'author': 'Aamir',
     'license': 'LGPL-3',

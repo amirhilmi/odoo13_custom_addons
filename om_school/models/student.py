@@ -8,7 +8,9 @@ class SchoolStudent(models.Model):
     _inherit = ['mail.thread','mail.activity.mixin']
     _description = "Student Table"
 
-    charity_amount = fields.Integer(string="Amount of Charity Received", required=True)
+    # charity_amount = fields.Integer(string="Amount of Charity Received",  required=True)
+    
+    charity_amount = fields.Float(string="Amount of Charity Received (RM)", digits=(16, 2), required=True)
 #     name = fields.Char(string="Name")
     age = fields.Integer(string="Age")
     personInCharge = fields.Char(string="Person In Charge")
@@ -21,6 +23,8 @@ class SchoolStudent(models.Model):
         ], 
         string='Charity Channel', default='moneyBox_1')
 
-    date_of_collection = fields.Char(string="Date Of Collection")
+    date_of_collection = fields.Datetime(string="Date Of Collection", default=fields.Datetime.now)
+    # admission_date = fields.Datetime(string='Init Date', default=fields.Datetime.now)
+
     note = fields.Text(string="Notes")  
     image = fields.Binary(string="Receipt")
